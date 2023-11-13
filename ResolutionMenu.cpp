@@ -24,15 +24,18 @@ void ResolutionMenu::displayResolutionMenu(){
     QGraphicsTextItem* titleResText = new QGraphicsTextItem(QString("Set the resolution"));
     QFont titleResFont("comic sans", 50);
     titleResText->setFont(titleResFont);
+    titleResText->setDefaultTextColor(QColorConstants::Svg::darkgreen);
     int trxPos = this->width()/2 - titleResText->boundingRect().width()/2;
     int tryPos = 150;
     titleResText->setPos(trxPos, tryPos);
     scene->addItem(titleResText);
 
+
     Button* playButton = new Button(QString("PLAY"));
     int bxPos = this->width()/2 - playButton->boundingRect().width()/2;
     int byPos = 470;
     playButton->setPos(bxPos, byPos);
+
     connect(playButton, SIGNAL(clicked()), this, SLOT(startGame()));
     scene->addItem(playButton);
 

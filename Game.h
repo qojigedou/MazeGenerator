@@ -1,6 +1,7 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QObject>
+#include <QPalette>
 #include <QGraphicsTextItem>
 #include <QPixmap>
 #include "Maze.h"

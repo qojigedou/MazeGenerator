@@ -35,6 +35,9 @@ void Game::displayMainMenu(){
     int bxPos = this->width()/2 - playButton->boundingRect().width()/2;
     int byPos = 275;
     playButton->setPos(bxPos, byPos);
+
+
+
     connect(playButton, SIGNAL(clicked()), this, SLOT(start()));
     scene->addItem(playButton);
 
